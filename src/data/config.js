@@ -41,4 +41,54 @@ export const siteConfig = {
       { value: '96%', label: 'de clientes por recomendación' },
     ],
   },
+  featuredPropertiesSection: {
+    eyebrow: 'Espacios seleccionados',
+    title: 'Propiedades con',
+    titleAccent: 'algo especial.',
+    description:
+      'Una selección cuidada de hogares con carácter, en ubicaciones que hacen más fácil imaginar tu próxima etapa.',
+  },
+  propertyLabels: {
+    bedrooms: 'Recámaras',
+    bathrooms: 'Baños',
+    area: 'm²',
+  },
+  featuredProperties: [
+    {
+      id: 'casa-olivo-san-angel',
+      title: 'Casa Olivo',
+      location: 'San Ángel, Ciudad de México',
+      price: '$12,850,000 MXN',
+      bedrooms: 4,
+      bathrooms: 3,
+      area: 286,
+      imageUrl:
+        'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85',
+      imageAlt: 'Casa contemporánea con sala abierta hacia el jardín',
+    },
+    {
+      id: 'departamento-luz-condesa',
+      title: 'Departamento Luz',
+      location: 'Condesa, Ciudad de México',
+      price: '$8,490,000 MXN',
+      bedrooms: 3,
+      bathrooms: 2,
+      area: 174,
+      imageUrl:
+        'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85',
+      imageAlt: 'Departamento amplio con sala de diseño contemporáneo',
+    },
+    {
+      id: 'casa-patio-coyoacan',
+      title: 'Casa Patio',
+      location: 'Del Carmen, Coyoacán',
+      price: '$10,200,000 MXN',
+      bedrooms: 3,
+      bathrooms: 3,
+      area: 241,
+      imageUrl:
+        'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85',
+      imageAlt: 'Residencia con patio ajardinado y ventanales amplios',
+    },
+  ],
 }
