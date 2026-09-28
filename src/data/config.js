@@ -128,4 +128,42 @@ export const siteConfig = {
       icon: 'Handshake',
     },
   ],
+  contact: {
+    email: 'hola@habita.mx',
+    phone: '+52 55 5555 0101',
+    phoneHref: '+525555550101',
+    address: 'Av. de la Paz 123, San Ángel, Ciudad de México, CDMX',
+    socialLinks: [
+      { name: 'Instagram', href: 'https://instagram.com', icon: 'Instagram' },
+      { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'LinkedIn' },
+      { name: 'Facebook', href: 'https://facebook.com', icon: 'Facebook' },
+    ],
+  },
+  contactSection: {
+    eyebrow: 'Estamos para ayudarte',
+    title: 'Hablemos de',
+    titleAccent: 'tu próximo espacio.',
+    description:
+      'Cuéntanos qué estás buscando. Nuestro equipo te responderá para encontrar juntos el mejor camino.',
+    form: {
+      nameLabel: 'Nombre',
+      namePlaceholder: 'Tu nombre',
+      emailLabel: 'Correo electrónico',
+      emailPlaceholder: 'tu@correo.com',
+      messageLabel: 'Mensaje',
+      messagePlaceholder: '¿Qué propiedad o servicio tienes en mente?',
+      submitLabel: 'Enviar mensaje',
+    },
+  },
+  footer: {
+    copyrightLabel: 'Todos los derechos reservados.',
+    developerText: 'Desarrollado por',
+    developerName: 'luisjcm',
+    developerUrl: 'https://luisjcm.com',
+    legalLinks: [
+      { label: 'Aviso de Privacidad', href: '/privacidad' },
+      { label: 'Términos y Condiciones', href: '/terminos' },
+      { label: 'Política de Cookies', href: '/cookies' },
+    ],
+  },
 }
