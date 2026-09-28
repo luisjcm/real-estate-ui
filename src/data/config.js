@@ -91,4 +91,41 @@ export const siteConfig = {
       imageAlt: 'Residencia con patio ajardinado y ventanales amplios',
     },
   ],
+  servicesSection: {
+    eyebrow: 'Acompañamiento integral',
+    title: 'Nuestros',
+    titleAccent: 'Servicios',
+    description:
+      'Te damos claridad y respaldo en cada etapa, desde la primera valoración hasta la firma final.',
+  },
+  services: [
+    {
+      id: 'asesoria-legal',
+      title: 'Asesoría legal',
+      description:
+        'Revisamos documentos, contratos y antecedentes para que tomes decisiones con tranquilidad.',
+      icon: 'Scale',
+    },
+    {
+      id: 'valuacion-inmobiliaria',
+      title: 'Valuación inmobiliaria',
+      description:
+        'Estimamos el valor de mercado de tu propiedad con criterios claros y conocimiento local.',
+      icon: 'BadgeDollarSign',
+    },
+    {
+      id: 'gestion-de-creditos',
+      title: 'Gestión de créditos',
+      description:
+        'Comparamos alternativas de financiamiento y te acompañamos durante el trámite.',
+      icon: 'Landmark',
+    },
+    {
+      id: 'asesoria-de-compra',
+      title: 'Asesoría de compra',
+      description:
+        'Definimos tus prioridades y negociamos contigo para encontrar el hogar adecuado.',
+      icon: 'Handshake',
+    },
+  ],
 }
