@@ -161,9 +161,9 @@ export const siteConfig = {
     developerName: 'luisjcm',
     developerUrl: 'https://luisjcm.com',
     legalLinks: [
-      { label: 'Aviso de Privacidad', href: '/privacidad' },
-      { label: 'Términos y Condiciones', href: '/terminos' },
-      { label: 'Política de Cookies', href: '/cookies' },
+      { label: 'Aviso de Privacidad', href: '#privacidad' },
+      { label: 'Términos y Condiciones', href: '#terminos' },
+      { label: 'Política de Cookies', href: '#cookies' },
     ],
   },
 }
