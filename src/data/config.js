@@ -6,6 +6,8 @@ export const siteConfig = {
   regionLabel: 'CDMX / MÉXICO',
   accessibility: {
     navigationLabel: 'Navegación principal',
+    menuOpenLabel: 'Abrir menú de navegación',
+    menuCloseLabel: 'Cerrar menú de navegación',
   },
   navigation: [
     { label: 'Propiedades', href: '#propiedades' },

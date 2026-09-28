@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 import { siteConfig } from '../../data/config'
 
 const actionStyles = {
@@ -17,9 +19,12 @@ export default function HeroSection({
   navigation = siteConfig.navigation,
   content = siteConfig.hero,
 }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const MobileMenuIcon = isMenuOpen ? X : Menu
+
   return (
     <section id="inicio" className="bg-[linear-gradient(135deg,#f6f7f2_0%,#eef1e8_58%,#e7eee5_100%)] text-[#20332b]">
-      <header className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-y-4 px-5 py-5 sm:px-8 lg:px-12">
+      <header className="relative z-20 mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-y-4 px-5 py-5 sm:px-8 lg:px-12">
         <a className="flex items-center gap-3" href="#inicio" aria-label={brand.name}>
           <span className="font-serif text-3xl leading-none">{brand.name}</span>
           <span className="hidden border-l border-[#20332b]/25 pl-3 text-[10px] font-semibold tracking-[0.16em] sm:block">
@@ -29,7 +34,7 @@ export default function HeroSection({
 
         <nav
           aria-label={siteConfig.accessibility.navigationLabel}
-          className="order-3 -mx-1 flex w-full items-center gap-6 overflow-x-auto pb-1 text-sm md:order-none md:w-auto md:gap-8 md:overflow-visible md:pb-0"
+          className="hidden items-center gap-8 text-sm md:flex"
         >
           {navigation.map((item) => (
             <a
@@ -42,9 +47,44 @@ export default function HeroSection({
           ))}
         </nav>
 
+        <button
+          aria-controls="mobile-navigation"
+          aria-expanded={isMenuOpen}
+          aria-label={
+            isMenuOpen
+              ? siteConfig.accessibility.menuCloseLabel
+              : siteConfig.accessibility.menuOpenLabel
+          }
+          className="flex h-10 w-10 items-center justify-center text-[#20332b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#263f35] md:hidden"
+          onClick={() => setIsMenuOpen((open) => !open)}
+          type="button"
+        >
+          <MobileMenuIcon aria-hidden="true" size={22} strokeWidth={1.7} />
+        </button>
+
         <span className="text-xs font-semibold tracking-[0.12em] text-[#607a5d] sm:text-sm">
           {siteConfig.regionLabel}
         </span>
+
+        <nav
+          id="mobile-navigation"
+          aria-label={siteConfig.accessibility.navigationLabel}
+          aria-hidden={!isMenuOpen}
+          className={`absolute inset-x-5 top-full z-50 flex flex-col gap-1 bg-[#fbfbf8] p-3 text-sm shadow-[0_16px_32px_rgba(32,51,43,0.12)] ring-1 ring-[#20332b]/10 transition-all duration-300 ease-in-out transform sm:inset-x-8 md:hidden ${isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 pointer-events-none opacity-0'}`}
+          inert={!isMenuOpen}
+        >
+          {navigation.map((item) => (
+            <a
+              className="px-3 py-3 text-[#20332b]/80 transition-colors hover:bg-[#e7eee5] hover:text-[#20332b]"
+              href={item.href}
+              key={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              tabIndex={isMenuOpen ? 0 : -1}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
       </header>
 
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-12 pt-7 sm:px-8 md:pb-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-14 lg:px-12 lg:pb-20 lg:pt-12">
