@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { siteConfig } from '../../data/config'
+import AnimatedCounter from '../ui/AnimatedCounter'
 
 const actionStyles = {
   primary:
@@ -118,7 +119,9 @@ export default function HeroSection({
           <dl className="mt-12 grid w-full grid-cols-3 gap-4 border-t border-[#20332b]/15 pt-5 sm:mt-16 sm:gap-6">
             {content.metrics.map((metric) => (
               <div key={metric.label}>
-                <dt className="text-xl font-semibold sm:text-2xl">{metric.value}</dt>
+                <dt className="text-xl font-semibold sm:text-2xl">
+                  <AnimatedCounter value={metric.value} />
+                </dt>
                 <dd className="mt-1 max-w-28 text-xs leading-5 text-[#20332b]/60 sm:text-sm">
                   {metric.label}
                 </dd>
